@@ -1,11 +1,5 @@
+echo '
 echo "
-##################################################################
-                       KodeKloud Puppet
-##################################################################
-" >> ~/.bashrc
-
-source ~/.bashrc
-
 cd /etc/puppetlabs/code/environments/production/manifests
 
 PS1="\Puppet manifests ~:# "
