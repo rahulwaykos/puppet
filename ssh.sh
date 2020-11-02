@@ -2,9 +2,9 @@ yum install figlet -y > /dev/null
 
 echo "figlet KodeKloud Puppet" >> ~/.bashrc
 
-bash
+exec bash
 
-cd /etc/puppetlabs/code/environment/production/manifests
+cd /etc/puppetlabs/code/environments/production/manifests
 
 PS1="\Puppet manifests ~:# "
 
