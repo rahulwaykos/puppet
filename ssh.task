@@ -1,7 +1,6 @@
 cd /etc/puppetlabs/code/environments/production/manifests
-
-
-read -p "What is the programming file name: " file
+read -p " What is the programming file name: " file
+echo $file
 
 cat <<EOF> $file
 
