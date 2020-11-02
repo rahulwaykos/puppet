@@ -1,4 +1,4 @@
-cd /etc/puppetlabs/code/environment/production/manifests
+cd /etc/puppetlabs/code/environments/production/manifests
 
 
 read -p "What is the programming file name: " file
