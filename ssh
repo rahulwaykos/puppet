@@ -1,6 +1,8 @@
-yum install figlet -y > /dev/null
-
-echo "figlet KodeKloud Puppet" >> ~/.bashrc
+echo "
+##################################################################
+                       KodeKloud Puppet
+##################################################################
+" >> ~/.bashrc
 
 source ~/.bashrc
 
