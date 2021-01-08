@@ -1,0 +1,51 @@
+- hosts: all
+  become: yes
+  tasks:
+  - name: app1
+    file:
+      path: /opt/sysops/blog.txt
+      state: touch
+      owner: tony
+      group: tony
+    when: "'stapp01' in inventory_hostname"      
+  - name: Create a symbolic link app3
+    file:
+      src: /opt/sysops
+      dest: /var/www/html
+      owner: tony
+      group: tony
+      state: link
+    when: "'stapp01' in inventory_hostname"      
+
+  - name: app2
+    file:
+      path: /opt/sysops/story.txt
+      state: touch
+      owner: steve
+      group: steve
+    when: "'stapp02' in inventory_hostname"
+  - name: Create a symbolic link app2
+    file:
+      src: /opt/sysops
+      dest: /var/www/html
+      owner: steve
+      group: steve
+      state: link
+    when: "'stapp02' in inventory_hostname"  
+
+  - name: app3
+    file:
+      path: /opt/sysops/media.txt
+      state: touch
+      owner: banner
+      group: banner
+    when: "'stapp03' in inventory_hostname"  
+  - name: Create a symbolic link app3
+    file:
+      src: /opt/sysops
+      dest: /var/www/html
+      owner: banner
+      group: banner
+      state: link
+    when: "'stapp03' in inventory_hostname"  
+    
