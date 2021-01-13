@@ -15,4 +15,7 @@ node /^(stapp01|stapp02|stapp03)\.stratos\.xfusioncorp\.com$/ {
 include yum_group
 }
 
+#on nodes
+#puppet agent -t
 #yum group summary | grep Installed
+#yum group list | grep Installed -A 1
